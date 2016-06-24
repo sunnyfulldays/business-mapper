@@ -1,0 +1,94 @@
+first, use modules for imagemagick and tesseract ocr to get the documents for processing 
+
+
+
+maybe probablepeople module and usaddress module 
+
+
+ideas for address parser 
+
+pre 
+N.
+E.
+W.
+S.
+
+post
+av.
+boul.
+hotel
+ct.
+hall
+Park
+pl.
+blk.
+
+
+
+put different permutations of addresses in different arrays 
+
+how many combinations?
+
+<last firstname>
+
+last (one word) firstname.|, number street(one word) post
+last (one word) firstname.|, number street (one word  post 
+last (one word) firstname.|, number pre street (one word) post 
+
+<last first middle>
+
+last first middle, number street 
+last first middle, pre number street post 
+last first middle, pre number street
+last first middle, number street post 	
+
+<last first middleinitial.>
+
+
+
+<last & last>
+
+last & last, street (one word) post
+last & last, street (two words) post 
+
+<last firstinitial.>
+
+<last firstinitial. middleinitial.>
+
+<last first Mrs.>
+
+<last bros.>
+
+text parser rules
+----------------
+last & last -- has an & symbol within the first 4 spaces?
+last firtinitial. -- has a dot, two spaces
+
+
+seperate the two sections of array with 1st comma or period? 
+
+except when you can't? not sure what to do then 
+
+always a space and then a number after name?
+
+except prop. then number
+except rear then number
+except N S W E rear
+except al. rear 
+
+rule - after ., there's a space, then a number
+
+
+
+
+TEXT PARSER STRUCTURE
+-----------------------------
+
+
+
+
+1. get ruleset from rules library
+2. run parser 1, name section to figure out names, and put them in rule arrays 
+2 run parser 1, address selection to figure out addresses, and put them in addresses arrays
+3. run parser 2, name arrays, to seperate arrays correctly, then place in xml format
+4. run parser 2, address arrays, to seperate arrays correctly, then place in xml format
