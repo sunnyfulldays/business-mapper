@@ -1,5 +1,5 @@
 #Written by David Kraus 
-#Description:
+#Descriptions:
 # -------------------------
 # This code does the following:
 #1. Takes a combined string consisting of a name and address 
